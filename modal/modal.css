@@ -83,7 +83,6 @@ html,body{
         top:50%;
         left:50%;
         max-width:800px;
-        min-width:600px;
         transform: translate(-50%,-50%);
         height:auto;
         border-radius:4px;
@@ -106,25 +105,25 @@ html,body{
     h3{
         font-family: 'Aboreto', cursive;
     }
-    @media(max-width:700px){
+    @media(max-width:700px) and (min-width:300px){
         .button--accept,.button--close {
-            width:auto;
+            width:100%;
+            height: auto;
         }
         .modal-box:active{
-            display:flex;
+            display:inline-flex;
             flex-basis: 100%;
             flex-wrap:wrap;
             height:auto;
             flex-shrink: 1;
-            flex-grow: 0;
-            justify-content: center;
+            flex-grow: 1;
             overflow:visible;
-            align-content: center;
-            padding:10px 20px;
+            word-wrap: break-word;
         }
         h1,h3,p{
             align-self: center;
             flex-wrap: wrap;
-            margin:10px;
+            text-align: center;
+            margin:0;
         }
     }
