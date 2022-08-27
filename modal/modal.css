@@ -73,6 +73,7 @@ html,body{
     #modal-background.active{
         opacity: 1;
         z-index:10;
+
     }
     .modal-box{
         flex-shrink: 1;
@@ -93,6 +94,8 @@ html,body{
     .modal-box.active{
         opacity:1;
         z-index:11;
+        width:100%;
+        height:auto;
     }
    h1,p{
         font-family:"indie flower",cursive
@@ -105,17 +108,23 @@ html,body{
     }
     @media(max-width:700px){
         .button--accept,.button--close {
-            width:100%;
+            width:auto;
         }
-        .modal-box{
+        .modal-box:active{
             display:flex;
-            flex-basis: 50px;
+            flex-basis: 100%;
             flex-wrap:wrap;
-            height:400px;
+            height:auto;
             flex-shrink: 1;
             flex-grow: 0;
             justify-content: center;
-            overflow-x:scroll;
-            
+            overflow:visible;
+            align-content: center;
+            padding:10px 20px;
+        }
+        h1,h3,p{
+            align-self: center;
+            flex-wrap: wrap;
+            margin:10px;
         }
     }
